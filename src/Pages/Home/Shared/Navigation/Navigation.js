@@ -1,10 +1,15 @@
 import React from "react";
+import  {useHistory} from 'react-router-dom'
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../../../hooks/useAuth";
 const Navigation = () => {
+  const history = useHistory()
   const { allContext } = useAuth();
   const { user, logout } = allContext;
+  const handlelogout = ()=>{
+    logout(history)
+  }
   return (
     <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -26,7 +31,7 @@ const Navigation = () => {
                   Dashboard
                 </Nav.Link>
                 <Nav.Link>{user?.displayName}</Nav.Link>
-                <Button onClick={logout}>Logout</Button>
+                <Button onClick={handlelogout}>Logout</Button>
               </>
             ) : (
               <Nav.Link as={NavLink} to="/login">

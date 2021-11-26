@@ -28,15 +28,15 @@ const Keepintouch = () => {
               </p>
               <div>
                 <i
-                  class="fab fa-facebook fa-2x text-primary"
+                  className="fab fa-facebook fa-2x text-primary"
                   style={{ cursor: "pointer" }}
                 ></i>
                 <i
-                  class="fab fa-youtube fa-2x text-danger m-2"
+                  className="fab fa-youtube fa-2x text-danger m-2"
                   style={{ cursor: "pointer" }}
                 ></i>
                 <i
-                  class="fab fa-instagram fa-2x"
+                  className="fab fa-instagram fa-2x"
                   style={{ color: "#8a3ab9", cursor: "pointer" }}
                 ></i>
               </div>

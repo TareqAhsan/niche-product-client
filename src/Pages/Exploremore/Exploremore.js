@@ -12,7 +12,7 @@ const Exploremore = () => {
           <h1 className="my-3 mb-4 display-4 text-white">Products</h1>
           <Row xs={1} md={2} lg={3} className="g-4">
             {products?.map((product) => (
-              <Product key={product.key} product={product}></Product>
+              <Product key={product._id} product={product}></Product>
             ))}
           </Row>
         </Container>
