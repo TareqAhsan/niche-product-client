@@ -2,7 +2,7 @@
 
 
 ##  Reactjs,Firebase,React-Bootstrap,Bootstrap,Custom-css, jwt-token ,React-hook-form,React-reveal
-
+## Add Stripe payment gateway so that user can make payment through cards.
 
 ### For authentication i have used Email-password Authentication and Google Authentication using firebase
 
