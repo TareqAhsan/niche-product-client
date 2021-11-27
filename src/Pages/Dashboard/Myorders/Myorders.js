@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import useAuth from "../../../hooks/useAuth";
+import { Link } from "react-router-dom";
 import { Table, Button, Alert } from "react-bootstrap";
 const Myorders = () => {
   const [myOrder, setMyOrder] = useState();
@@ -49,6 +50,7 @@ const Myorders = () => {
                 <th>Price</th>
                 <th>status</th>
                 <th>Cancel</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -62,6 +64,15 @@ const Myorders = () => {
                     <Button onClick={() => handleDelete(order._id)}>
                       cancel
                     </Button>
+                  </td>
+                  <td>
+                    {order.payment ? (
+                      "paid"
+                    ) : (
+                      <Link to={`/dashboard/pay/${order._id}`}>
+                        <Button>Pay</Button>
+                      </Link>
+                    )}
                   </td>
                 </tr>
               ))}

@@ -83,11 +83,11 @@ const Dashboard = () => {
                   </>
                 ) : (
                   <>
-                    <Nav.Link as={Link} to={`${url}/pay`}>
+                    {/* <Nav.Link as={Link} to={`${url}/pay`}>
                       <Button variant="success" className="w-100">
                         Payment System
                       </Button>
-                    </Nav.Link>
+                    </Nav.Link> */}
                     <Nav.Link as={Link} to={`${url}/myorders`}>
                       <Button variant="success" className="w-100">
                         My Orders
@@ -129,11 +129,14 @@ const Dashboard = () => {
         <AdminRoute path={`${path}/manageallorders`}>
           <ManageAllOrders />
         </AdminRoute>
-        <Route path={`${path}/pay`}>
+        {/* <Route path={`${path}/pay`}>
           <Pay />
-        </Route>
+        </Route> */}
         <Route path={`${path}/myorders`}>
           <Myorders />
+        </Route>
+        <Route path={`${path}/pay/:purchaseid`}>
+          <Pay />
         </Route>
         <Route path={`${path}/review`}>
           <Review />
